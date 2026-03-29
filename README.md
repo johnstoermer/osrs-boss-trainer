@@ -1,25 +1,16 @@
 # Gemstone Trainer
 
-A RuneLite plugin that overlays boss models and attack patterns on Gemstone Crabs for PvM training.
+A RuneLite plugin that overlays boss models and attack patterns on the Gemstone Crab for PvM training.
 
 ## Supported Bosses
 
-### Verzik P2 (Theatre of Blood)
-- Full attack cycle: ranged (urn bombs), melee (bounce), and lightning (zap)
-- Projectiles and explosion effects
-- Configurable sound effects
-
-### Sol Heredit (Colosseum)
-- Spear and shield attack patterns with ground slam hazard tiles
-- Correct attack sequencing: same style twice triggers the alternate pattern
-- Configurable sound effects
+- Verzik P2
+- Sol Heredit
 
 ## Features
 
 - **Boss selection** via config dropdown (Verzik P2 / Sol Heredit)
 - **Hit detection** with "Ouch!" overhead text when standing on hazard tiles
-- **Ghostly transparent models** with pale blue recolor
-- **Boss faces the player** on each attack
 - **Configurable sound IDs** for all attack types
 - **Debug overlay** showing attack phase, tick counter, and melee range
 
