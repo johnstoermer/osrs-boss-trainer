@@ -250,18 +250,18 @@ public class GemstoneTrainerPlugin extends Plugin
             return;
         }
 
+        // Apply transparency
         byte[] trans = model.getFaceTransparencies();
-        if (trans == null || trans.length == 0)
+        if (trans != null && trans.length > 0)
         {
-            return;
+            for (int i = 0; i < trans.length; i++)
+            {
+                int current = trans[i] & 0xFF;
+                int combined = Math.max(current, TRANSPARENCY_ALPHA);
+                trans[i] = (byte) combined;
+            }
         }
 
-        for (int i = 0; i < trans.length; i++)
-        {
-            int current = trans[i] & 0xFF;
-            int combined = Math.max(current, TRANSPARENCY_ALPHA);
-            trans[i] = (byte) combined;
-        }
     }
 
     private boolean shouldDraw(Renderable renderable, boolean drawingUI)

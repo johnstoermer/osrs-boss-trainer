@@ -350,8 +350,7 @@ public class VerzikCrabState implements CrabBossState
      */
     static void applyGhostEffect(net.runelite.api.ModelData modelData)
     {
-        // Recolor to ghostly pale blue
-        modelData = modelData.cloneColors();
+        // Recolor to ghostly pale blue — recolor in-place on the original
         short[] faceColors = modelData.getFaceColors();
         if (faceColors != null)
         {
