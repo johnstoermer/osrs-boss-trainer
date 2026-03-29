@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import net.runelite.api.Animation;
 import net.runelite.api.Client;

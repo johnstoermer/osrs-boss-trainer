@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -39,7 +39,7 @@ public class VerzikCrabState implements CrabBossState
     @Getter
     private final NPC npc;
     private final Client client;
-    private final VerzikTrainerConfig config;
+    private final GemstoneTrainerConfig config;
     private RuneLiteObject verzikObject;
     private Animation idleAnimation;
     private Animation rangedAnimation;
@@ -60,7 +60,7 @@ public class VerzikCrabState implements CrabBossState
 
     private final List<RuneLiteObject> activeExplosions = new ArrayList<>();
 
-    public VerzikCrabState(NPC npc, Client client, VerzikTrainerConfig config)
+    public VerzikCrabState(NPC npc, Client client, GemstoneTrainerConfig config)
     {
         this.npc = npc;
         this.client = client;

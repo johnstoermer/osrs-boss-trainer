@@ -1,12 +1,12 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.ConfigSection;
 
-@ConfigGroup("verziktrainer")
-public interface VerzikTrainerConfig extends Config
+@ConfigGroup("gemstonetrainer")
+public interface GemstoneTrainerConfig extends Config
 {
     @ConfigItem(
         keyName = "bossType",

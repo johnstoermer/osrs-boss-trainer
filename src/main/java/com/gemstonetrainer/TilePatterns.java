@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;

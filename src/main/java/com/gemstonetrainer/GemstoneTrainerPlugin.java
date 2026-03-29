@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +30,7 @@ import net.runelite.client.ui.overlay.OverlayManager;
     description = "Overlays boss models and attack patterns on Gemstone Crabs for PvM training",
     tags = {"verzik", "tob", "sol", "heredit", "colosseum", "trainer", "pvm", "gemstone"}
 )
-public class VerzikTrainerPlugin extends Plugin
+public class GemstoneTrainerPlugin extends Plugin
 {
     private static final int GEMSTONE_CRAB_ID = 14779;
     private static final String GEMSTONE_CRAB_NAME = "Gemstone Crab";
@@ -45,15 +45,15 @@ public class VerzikTrainerPlugin extends Plugin
     private OverlayManager overlayManager;
 
     @Inject
-    private VerzikTrainerConfig config;
+    private GemstoneTrainerConfig config;
 
     @Inject
-    private VerzikTrainerOverlay overlay;
+    private GemstoneTrainerOverlay overlay;
 
     @Provides
-    VerzikTrainerConfig provideConfig(ConfigManager configManager)
+    GemstoneTrainerConfig provideConfig(ConfigManager configManager)
     {
-        return configManager.getConfig(VerzikTrainerConfig.class);
+        return configManager.getConfig(GemstoneTrainerConfig.class);
     }
 
     @Getter
@@ -177,7 +177,7 @@ public class VerzikTrainerPlugin extends Plugin
     @Subscribe
     public void onConfigChanged(ConfigChanged event)
     {
-        if (!"verziktrainer".equals(event.getGroup()))
+        if (!"gemstonetrainer".equals(event.getGroup()))
         {
             return;
         }

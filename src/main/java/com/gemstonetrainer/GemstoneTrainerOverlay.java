@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -12,15 +12,15 @@ import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.components.LineComponent;
 import net.runelite.client.ui.overlay.components.PanelComponent;
 
-public class VerzikTrainerOverlay extends Overlay
+public class GemstoneTrainerOverlay extends Overlay
 {
     private final Client client;
-    private final VerzikTrainerPlugin plugin;
-    private final VerzikTrainerConfig config;
+    private final GemstoneTrainerPlugin plugin;
+    private final GemstoneTrainerConfig config;
     private final PanelComponent panelComponent = new PanelComponent();
 
     @Inject
-    public VerzikTrainerOverlay(Client client, VerzikTrainerPlugin plugin, VerzikTrainerConfig config)
+    public GemstoneTrainerOverlay(Client client, GemstoneTrainerPlugin plugin, GemstoneTrainerConfig config)
     {
         this.client = client;
         this.plugin = plugin;

@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import net.runelite.api.Client;
 import net.runelite.api.Model;

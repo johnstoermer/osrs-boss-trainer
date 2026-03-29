@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
@@ -19,12 +19,12 @@ import java.util.Map;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-public class VerzikTrainerPluginTest
+public class GemstoneTrainerPluginTest
 {
-    private VerzikTrainerPlugin plugin;
+    private GemstoneTrainerPlugin plugin;
 
     @Mock private Client client;
-    @Mock private VerzikTrainerConfig config;
+    @Mock private GemstoneTrainerConfig config;
     @Mock private NPC gemstoneCrab;
     @Mock private NPC otherNpc;
 
@@ -33,7 +33,7 @@ public class VerzikTrainerPluginTest
     {
         MockitoAnnotations.openMocks(this);
 
-        plugin = new VerzikTrainerPlugin();
+        plugin = new GemstoneTrainerPlugin();
 
         // Inject mocks via reflection
         setField(plugin, "client", client);
@@ -73,7 +73,7 @@ public class VerzikTrainerPluginTest
     @Test
     public void testIsGemstoneCrabMatchesById() throws Exception
     {
-        Method isGemstoneCrab = VerzikTrainerPlugin.class.getDeclaredMethod("isGemstoneCrab", NPC.class);
+        Method isGemstoneCrab = GemstoneTrainerPlugin.class.getDeclaredMethod("isGemstoneCrab", NPC.class);
         isGemstoneCrab.setAccessible(true);
 
         assertTrue((boolean) isGemstoneCrab.invoke(plugin, gemstoneCrab));
@@ -86,7 +86,7 @@ public class VerzikTrainerPluginTest
         when(crabWithDifferentId.getId()).thenReturn(99999);
         when(crabWithDifferentId.getName()).thenReturn("Gemstone Crab");
 
-        Method isGemstoneCrab = VerzikTrainerPlugin.class.getDeclaredMethod("isGemstoneCrab", NPC.class);
+        Method isGemstoneCrab = GemstoneTrainerPlugin.class.getDeclaredMethod("isGemstoneCrab", NPC.class);
         isGemstoneCrab.setAccessible(true);
 
         assertTrue("Crab with matching name but different ID should be detected",
@@ -96,7 +96,7 @@ public class VerzikTrainerPluginTest
     @Test
     public void testIsGemstoneCrabRejectsNonCrab() throws Exception
     {
-        Method isGemstoneCrab = VerzikTrainerPlugin.class.getDeclaredMethod("isGemstoneCrab", NPC.class);
+        Method isGemstoneCrab = GemstoneTrainerPlugin.class.getDeclaredMethod("isGemstoneCrab", NPC.class);
         isGemstoneCrab.setAccessible(true);
 
         assertFalse((boolean) isGemstoneCrab.invoke(plugin, otherNpc));
@@ -184,7 +184,7 @@ public class VerzikTrainerPluginTest
         VerzikCrabState mockState = mock(VerzikCrabState.class);
         plugin.getTrackedCrabs().put(1, mockState);
 
-        Method shouldDraw = VerzikTrainerPlugin.class.getDeclaredMethod("shouldDraw", Renderable.class, boolean.class);
+        Method shouldDraw = GemstoneTrainerPlugin.class.getDeclaredMethod("shouldDraw", Renderable.class, boolean.class);
         shouldDraw.setAccessible(true);
 
         boolean result = (boolean) shouldDraw.invoke(plugin, gemstoneCrab, false);
@@ -195,7 +195,7 @@ public class VerzikTrainerPluginTest
     public void testShouldDrawShowsUntrackedCrab() throws Exception
     {
         // No tracked crabs
-        Method shouldDraw = VerzikTrainerPlugin.class.getDeclaredMethod("shouldDraw", Renderable.class, boolean.class);
+        Method shouldDraw = GemstoneTrainerPlugin.class.getDeclaredMethod("shouldDraw", Renderable.class, boolean.class);
         shouldDraw.setAccessible(true);
 
         boolean result = (boolean) shouldDraw.invoke(plugin, gemstoneCrab, false);
@@ -208,7 +208,7 @@ public class VerzikTrainerPluginTest
         VerzikCrabState mockState = mock(VerzikCrabState.class);
         plugin.getTrackedCrabs().put(1, mockState);
 
-        Method shouldDraw = VerzikTrainerPlugin.class.getDeclaredMethod("shouldDraw", Renderable.class, boolean.class);
+        Method shouldDraw = GemstoneTrainerPlugin.class.getDeclaredMethod("shouldDraw", Renderable.class, boolean.class);
         shouldDraw.setAccessible(true);
 
         boolean result = (boolean) shouldDraw.invoke(plugin, otherNpc, false);
@@ -222,7 +222,7 @@ public class VerzikTrainerPluginTest
         VerzikCrabState mockState = mock(VerzikCrabState.class);
         plugin.getTrackedCrabs().put(1, mockState);
 
-        Method shouldDraw = VerzikTrainerPlugin.class.getDeclaredMethod("shouldDraw", Renderable.class, boolean.class);
+        Method shouldDraw = GemstoneTrainerPlugin.class.getDeclaredMethod("shouldDraw", Renderable.class, boolean.class);
         shouldDraw.setAccessible(true);
 
         boolean result = (boolean) shouldDraw.invoke(plugin, gemstoneCrab, false);

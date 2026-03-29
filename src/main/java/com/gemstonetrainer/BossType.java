@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

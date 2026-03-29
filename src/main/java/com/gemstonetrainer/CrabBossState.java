@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import java.util.LinkedHashMap;
 import net.runelite.api.Model;

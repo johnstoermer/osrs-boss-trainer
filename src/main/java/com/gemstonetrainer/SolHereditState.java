@@ -1,4 +1,4 @@
-package com.verziktrainer;
+package com.gemstonetrainer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -40,7 +40,7 @@ public class SolHereditState implements CrabBossState
     @Getter
     private final NPC npc;
     private final Client client;
-    private final VerzikTrainerConfig config;
+    private final GemstoneTrainerConfig config;
     private RuneLiteObject solObject;
     private Animation idleAnimation;
     private Animation spearAnimation;
@@ -64,7 +64,7 @@ public class SolHereditState implements CrabBossState
     private List<Map.Entry<WorldPoint, Integer>> pendingSlams = null;
     private boolean pendingOuch = false;
 
-    public SolHereditState(NPC npc, Client client, VerzikTrainerConfig config)
+    public SolHereditState(NPC npc, Client client, GemstoneTrainerConfig config)
     {
         this.npc = npc;
         this.client = client;

@@ -28,7 +28,7 @@ test {
     useJUnit()
 }
 
-group = 'com.verziktrainer'
+group = 'com.gemstonetrainer'
 version = '1.0.0'
 sourceCompatibility = '11'
 targetCompatibility = '11'
