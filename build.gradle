@@ -12,12 +12,8 @@ dependencies {
     compileOnly 'net.runelite:client:latest.release'
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
-    compileOnly 'org.pf4j:pf4j:3.10.0'
-    compileOnly 'javax.inject:javax.inject:1'
 
     testImplementation 'net.runelite:client:latest.release'
-    testImplementation 'javax.inject:javax.inject:1'
-    testImplementation 'org.pf4j:pf4j:3.10.0'
     testImplementation 'org.projectlombok:lombok:1.18.30'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
     testImplementation 'junit:junit:4.13.2'
