@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url = 'https://repo.runelite.net' }
+}
+
+dependencies {
+    compileOnly 'net.runelite:client:latest.release'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'org.pf4j:pf4j:3.10.0'
+    compileOnly 'javax.inject:javax.inject:1'
+
+    testImplementation 'net.runelite:client:latest.release'
+    testImplementation 'javax.inject:javax.inject:1'
+    testImplementation 'org.pf4j:pf4j:3.10.0'
+    testImplementation 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:4.11.0'
+}
+
+test {
+    useJUnit()
+}
+
+group = 'com.verziktrainer'
+version = '1.0.0'
+sourceCompatibility = '11'
+targetCompatibility = '11'
